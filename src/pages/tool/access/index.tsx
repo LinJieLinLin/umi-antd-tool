@@ -17,7 +17,7 @@ const AccessPage: React.FC = () => {
       <Access accessible={access.canTest}>
         <Button>看不到我</Button>
       </Access>
-      <Button type='primary'>1231</Button>
+      <Button type="primary">1231</Button>
     </PageContainer>
   );
 };

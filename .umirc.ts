@@ -1,39 +1,35 @@
 import { defineConfig } from '@umijs/max';
+import devConfig from './devConfig';
+import openapiConfig from './openapiConfig';
 
-export default defineConfig({
+let extraConfig = {};
+switch (process.env.NODE_ENV) {
+  case 'production':
+    extraConfig = {};
+    break;
+  case 'api':
+    extraConfig = openapiConfig;
+    break;
+  default:
+    extraConfig = devConfig;
+    break;
+}
+
+const config = defineConfig({
   antd: {},
   access: {},
   model: {},
   initialState: {},
   request: {},
   layout: {
-    title: 'UMI',
+    title: '',
   },
-  routes: [
-    {
-      path: '/',
-      redirect: '/home',
-    },
-    {
-      name: '首页',
-      path: '/home',
-      component: './Home',
-    },
-    {
-      name: '权限演示',
-      path: '/access',
-      component: './Access',
-    },
-    {
-      name: '我的CRUD 示例',
-      path: '/table',
-      component: './Table',
-    },
-    {
-      name: 'f oo 示例',
-      path: '/foo',
-      component: './foo',
-    },
-  ],
+  mfsu: {
+    esbuild: true,
+  },
   npmClient: 'pnpm',
 });
+export default {
+  ...config,
+  ...extraConfig,
+};

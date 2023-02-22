@@ -1,1 +1,1 @@
-export const DEFAULT_NAME = 'Umi123321';
+export const DEFAULT_NAME = 'linjielinlin';

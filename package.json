@@ -1,4 +1,5 @@
 {
+  "name": "antdpro",
   "private": true,
   "author": "linjielinlin <993353454@qq.com>",
   "scripts": {
@@ -6,24 +7,29 @@
     "dev": "max dev",
     "format": "prettier --cache --write .",
     "postinstall": "max setup",
+    "openapi": "ross-env NODE_ENV=api max openapi",
     "prepare": "husky install",
     "setup": "max setup",
     "start": "npm run dev"
   },
   "dependencies": {
-    "@ant-design/icons": "^4.7.0",
-    "@ant-design/pro-components": "^2.0.1",
-    "@umijs/max": "^4.0.42",
-    "antd": "^5.0.0"
+    "@ant-design/icons": "^4.8.0",
+    "@ant-design/pro-components": "^2.3.56",
+    "@umijs/max": "^4.0.52",
+    "@umijs/max-plugin-openapi": "^2.0.2",
+    "antd": "^5.2.1",
+    "cross-env": "^7.0.3",
+    "lj-utils": "^0.3.1",
+    "swagger-ui-dist": "^4.15.5"
   },
   "devDependencies": {
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1",
-    "prettier-plugin-organize-imports": "^2",
-    "prettier-plugin-packagejson": "^2",
-    "typescript": "^4.1.2"
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "prettier": "^2.8.4",
+    "prettier-plugin-organize-imports": "^2.3.4",
+    "prettier-plugin-packagejson": "^2.4.3",
+    "typescript": "^4.9.5"
   }
 }
