@@ -16,6 +16,12 @@ switch (process.env.NODE_ENV) {
 }
 
 const config = defineConfig({
+  // 二级目录+hash
+  history: {
+    type: 'hash',
+  },
+  publicPath: process.env.NODE_ENV === 'production' ? '/tool/' : '/tool/',
+  // 二级目录+hash end
   antd: {},
   access: {},
   model: {},
