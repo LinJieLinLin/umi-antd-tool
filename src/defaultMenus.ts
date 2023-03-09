@@ -5,12 +5,12 @@ export const menu = [
     // path: '/tool',
     children: [
       {
-        name: 'acc',
-        path: '/tool/access',
+        name: 'qrcode',
+        path: '/tool/qrcode',
       },
       {
-        name: 'foo',
-        path: '/tool/foo',
+        name: 'acc',
+        path: '/tool/access',
       },
     ],
   },

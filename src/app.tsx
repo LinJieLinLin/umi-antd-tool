@@ -9,7 +9,7 @@ import {
 } from '@ant-design/icons';
 import defaultMenus from './defaultMenus';
 import type { MenuDataItem } from '@ant-design/pro-components';
-
+import './global.less';
 console.error('process.env', process.env);
 
 const IconMap: any = {
