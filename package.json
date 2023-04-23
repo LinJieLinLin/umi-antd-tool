@@ -1,9 +1,9 @@
 {
-  "name": "antdpro",
+  "name": "umi-antd-tool",
   "private": true,
   "author": "linjielinlin <993353454@qq.com>",
   "scripts": {
-    "build": "max build",
+    "build": "cross-env NODE_ENV=production max build",
     "dev": "max dev",
     "format": "prettier --cache --write .",
     "postinstall": "max setup",
@@ -19,13 +19,13 @@
     "@umijs/max-plugin-openapi": "^2.0.2",
     "ahooks": "^3.7.5",
     "antd": "^5.2.1",
-    "cross-env": "^7.0.3",
     "lj-utils": "^0.3.4",
     "swagger-ui-dist": "^4.15.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "cross-env": "^7.0.3",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",

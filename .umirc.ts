@@ -14,13 +14,16 @@ switch (process.env.NODE_ENV) {
     extraConfig = devConfig;
     break;
 }
-
+console.log('env:', process.env.NODE_ENV);
 const config = defineConfig({
   // 二级目录+hash
   history: {
     type: 'hash',
   },
-  publicPath: process.env.NODE_ENV === 'production' ? '/tool/' : '/tool/',
+  publicPath:
+    process.env.NODE_ENV === 'production'
+      ? '/umi-antd-tool/'
+      : '/umi-antd-tool/',
   // 二级目录+hash end
   antd: {},
   access: {},
