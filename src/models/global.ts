@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 const useUser = () => {
   const [name, setName] = useState<string>(DEFAULT_NAME);
+  console.log('useUser', name);
   return {
     name,
     setName,

@@ -1,5 +1,5 @@
 import { PageContainer } from '@ant-design/pro-components';
-import { Button, Form, Input, QRCode, Switch, Row, Col } from 'antd';
+import { Button, Col, Form, Input, QRCode, Row, Switch } from 'antd';
 import { useEffect, useState } from 'react';
 
 const AccessPage: React.FC = () => {
@@ -21,9 +21,7 @@ const AccessPage: React.FC = () => {
   };
   const onReset = () => {
     form.resetFields();
-    setTimeout(() => {
-      setQrData(form.getFieldsValue());
-    }, 0);
+    setQrData(form.getFieldsValue());
   };
 
   useEffect(() => {
