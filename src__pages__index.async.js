@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkumi_antd_tool=self.webpackChunkumi_antd_tool||[]).push([[858],{81834:function(e,n,t){t.r(n);var _=t(51731),a=t(93236),u=t(62086),o=function(){return(0,a.useEffect)(function(){_.history.replace("/tool/qrcode")},[]),(0,u.jsx)(u.Fragment,{})};n.default=o}}]);
