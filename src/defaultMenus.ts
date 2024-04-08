@@ -1,5 +1,20 @@
 export const menu = [
   {
+    name: '微信小程序',
+    icon: 'wechat',
+    // path: '/tool',
+    children: [
+      {
+        name: 'token',
+        path: '/wechat/token',
+      },
+      {
+        name: 'microQrCode',
+        path: '/wechat/microQrCode',
+      },
+    ],
+  },
+  {
     name: '工具',
     icon: 'tool',
     // path: '/tool',
@@ -9,8 +24,8 @@ export const menu = [
         path: '/tool/qrcode',
       },
       {
-        name: 'acc',
-        path: '/tool/access',
+        name: 'tem',
+        path: '/tool/tem',
       },
     ],
   },

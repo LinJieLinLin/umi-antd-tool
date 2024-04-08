@@ -6,9 +6,11 @@ import {
   ShareAltOutlined,
   SmileOutlined,
   ToolOutlined,
+  WechatOutlined,
 } from '@ant-design/icons';
-import defaultMenus from './defaultMenus';
 import type { MenuDataItem } from '@ant-design/pro-components';
+import type { RequestConfig } from '@umijs/max';
+import defaultMenus from './defaultMenus';
 import './global.less';
 console.error('process.env', process.env);
 
@@ -17,6 +19,7 @@ const IconMap: any = {
   heart: <HeartOutlined />,
   tool: <ToolOutlined />,
   share: <ShareAltOutlined />,
+  wechat: <WechatOutlined />,
 };
 const loopMenuItem = (menus: MenuDataItem[]): MenuDataItem[] =>
   menus.map(({ icon, children, ...item }) => ({
@@ -31,6 +34,22 @@ export async function getInitialState(): Promise<{
   console.log('getInitialState');
   return { name: 'linj', userId: 1 };
 }
+// 请求配置 https://umijs.org/docs/max/request
+export const request: RequestConfig = {
+  timeout: 5 * 1000,
+  headers: { 'X-Requested-With': 'XMLHttpRequest' },
+  // other axios options you want
+  errorConfig: {
+    errorHandler(err, opts) {
+      console.error(err);
+      console.debug(opts);
+    },
+    errorThrower() {},
+  },
+  requestInterceptors: [],
+  responseInterceptors: [],
+};
+// 菜单
 export const layout = (data: any) => {
   return {
     onMenuHeaderClick: () => {
